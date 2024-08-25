@@ -9,9 +9,6 @@ slurp | grim -g - - | wl-copy && wl-paste > $file_location
 output=$(printf "No\nYes" | wofi -d -p "${title}")
 
 case $output in
-	"No")
-		exit 0;
-		;;
 	"Yes")
 		gimp "${file_location}"
 		;;
